@@ -2,9 +2,9 @@ export default function About() {
   return (
     <div
       id="About"
-      className="flex flex-col bg-secondary-me lg:p-10 text-justify lg:pt-15"
+      className="flex flex-col bg-secondary-me lg:p-10 md:p-10 text-justify lg:pt-15"
     >
-      <h1 className="lg:my-5 lg:text-4xl font-paytoneOne underline underline-offset-1">
+      <h1 className="lg:my-5 md:my-5 lg:text-5xl md:text-3xl font-paytoneOne underline underline-offset-1 text-primary-me">
         Tentang Saya<span className="text-tertiary-me">.</span>
       </h1>
       <p>
