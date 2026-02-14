@@ -9,11 +9,11 @@ export default function Hero() {
   return (
     <div
       id="Hero"
-      className="flex flex-row justify-center lg:space-x-50 md:space-x-10 items-center min-h-screen text-secondary-me"
+      className="flex flex-col md:flex-row justify-center lg:space-x-50 md:space-x-10 items-center min-h-screen text-secondary-me"
     >
-      <section className="name space-y-4">
-        <h1 className="lg:text-3xl md:text-2xl font-bold">Haii, Saya</h1>
-        <h1 className="lg:text-4xl md:text-3xl">Agil Gilang Chandra Saputra</h1>
+      <section className="name space-y-4 text-center mb-4 md:mb-0">
+        <h1 className="lg:text-3xl md:text-2xl text-xl font-bold">Haii, Saya</h1>
+        <h1 className="lg:text-4xl md:text-3xl text-2xl">Agil Gilang Chandra Saputra</h1>
         <h1 className="lg:text-3xl font-bold bg-tertiary-me text-center p-1 rounded-lg">
           Software Developer
         </h1>

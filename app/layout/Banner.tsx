@@ -1,6 +1,6 @@
 export default function Banner() {
   return(
-    <div className="flex flex-row justify-around bg-tertiary-me p-5 text-2xl font-bold text-primary-me">
+    <div className="flex flex-row justify-around bg-tertiary-me p-5 md:text-2xl text-sm font-bold text-primary-me">
         <p>HTML</p>
         <p>CSS</p>
         <p>NextJS</p>

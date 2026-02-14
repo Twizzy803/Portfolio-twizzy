@@ -29,7 +29,7 @@ export default function Header() {
         }`}
       >
         <h1 className="lg:text-2xl font-bold">Agil Gilang C.S</h1>
-        <div className="space-x-10">
+        <div className="space-x-10 hidden md:block">
           <a href="#Hero">Beranda</a>
           <a href="#About">Tentang Saya</a>
           <a href="#Project">Proyek</a>
