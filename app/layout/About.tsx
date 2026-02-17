@@ -1,13 +1,16 @@
+"use client"
+import { AnimasiH1kiri, AnimasiPkiri } from "../components/Animasi";
+
 export default function About() {
   return (
     <div
       id="About"
       className="flex flex-col bg-secondary-me lg:p-10 md:p-10 p-2 text-justify lg:pt-15"
     >
-      <h1 className="lg:my-5 md:my-5 lg:text-5xl md:text-3xl text-xl font-paytoneOne underline underline-offset-1 text-primary-me">
+      <AnimasiH1kiri className="lg:my-5 md:my-5 lg:text-5xl md:text-3xl text-xl font-paytoneOne underline underline-offset-1 text-primary-me">
         Tentang Saya<span className="text-tertiary-me">.</span>
-      </h1>
-      <p>
+      </AnimasiH1kiri>
+      <AnimasiPkiri>
         Saya adalah seorang pengembang web dan mobile yang antusias dan
         berdedikasi tinggi dalam menciptakan solusi digital yang berdampak.
         Dengan bekal keahlian teknis yang mencakup HTML, CSS, Tailwind CSS,
@@ -19,7 +22,7 @@ export default function About() {
         untuk terus berkembang. Sebagai penunjang fondasi karir ini, saya
         merupakan lulusan Politeknik Negeri Jember program studi Teknik
         Informatika.
-      </p>
+      </AnimasiPkiri>
     </div>
   );
 }

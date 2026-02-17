@@ -1,8 +1,10 @@
+"use client"
 import Image from "next/image";
 
 import Iconsins from "../assets/icons/instagram.svg";
 import Iconslink from "../assets/icons/linkedin.svg";
 import Iconsgit from "../assets/icons/github.svg";
+import { ScrollPop } from "../components/Animasi";
 
 export default function Contact() {
   return (
@@ -10,14 +12,14 @@ export default function Contact() {
       id="Contact"
       className="text-secondary-me md:py-15 py-5 lg:px-30 md:px-15 px-10"
     >
-      <div className="flex flex-col justify-center">
+      <ScrollPop className="flex flex-col justify-center">
         <h1 className="font-paytoneOne lg:text-5xl md:text-3xl text-xl lg:mb-5 mb-4">Kontak.</h1>
         <div className="flex md:flex-row flex-col md:justify-between items-center">
           <div className="lg:ml-10 md:ml-5 md:mb-0 mb-5">
             {/* //* Instagram */}
             <a
               href="https://www.instagram.com/chandra_saputra02/"
-              className="flex flex-row items-center mb-4"
+              className="flex flex-row items-center mb-4 hover:scale-105 active:scale-95 transition-transfrom duration-200"
             >
               <Image
                 src={Iconsins}
@@ -30,7 +32,7 @@ export default function Contact() {
             {/* //* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/agilgilangcs/"
-              className="flex flex-row items-center mb-4"
+              className="flex flex-row items-center mb-4 hover:scale-105 active:scale-95 transition-transfrom duration-200"
             >
               <Image
                 src={Iconslink}
@@ -43,7 +45,7 @@ export default function Contact() {
             {/* //* Github */}
             <a
               href="https://github.com/Twizzy803"
-              className="flex flex-row items-center"
+              className="flex flex-row items-center hover:scale-105 active:scale-95 transition-transfrom duration-200"
             >
               <Image
                 src={Iconsgit}
@@ -66,7 +68,7 @@ export default function Contact() {
             </form>
           </div>
         </div>
-      </div>
+      </ScrollPop>
     </section>
   );
 }

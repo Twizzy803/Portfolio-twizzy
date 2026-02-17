@@ -2,6 +2,7 @@
 import Image from "next/image";
 
 import PixelTransition from "../components/PixelTransition";
+import {AnimasiKanan, AnimasiKiri} from "../components/Animasi";
 
 import Photo from "../assets/img/Photo.png";
 
@@ -11,14 +12,14 @@ export default function Hero() {
       id="Hero"
       className="flex flex-col md:flex-row justify-center lg:space-x-50 md:space-x-10 items-center min-h-screen text-secondary-me"
     >
-      <section className="name space-y-4 text-center mb-4 md:mb-0">
+      <AnimasiKiri className="name space-y-4 text-center mb-4 md:mb-0">
         <h1 className="lg:text-3xl md:text-2xl text-xl font-bold">Haii, Saya</h1>
         <h1 className="lg:text-4xl md:text-3xl text-2xl">Agil Gilang Chandra Saputra</h1>
         <h1 className="lg:text-3xl font-bold bg-tertiary-me text-center p-1 rounded-lg">
           Software Developer
         </h1>
-      </section>
-      <section className="card flex flex-col justify-center items-center space-y-5">
+      </AnimasiKiri>
+      <AnimasiKanan className="card flex flex-col justify-center items-center space-y-5">
         <PixelTransition
           firstContent={
             <Image
@@ -57,7 +58,7 @@ export default function Hero() {
         >
           Download CV
         </a>
-      </section>
+      </AnimasiKanan>
     </div>
   );
 }
