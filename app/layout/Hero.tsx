@@ -52,7 +52,7 @@ export default function Hero() {
           className="custom-pixel-card"
         />
         <a
-          href="/public/doc/CV.pdf"
+          href="/doc/CV.pdf"
           download="CV_Agil Gilang Chandra Saputra.pdf"
           className="bg-tertiary-me py-2 px-8 rounded-lg hover:bg-tertiary-me/70"
         >
