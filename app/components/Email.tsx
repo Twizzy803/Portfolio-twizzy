@@ -11,23 +11,33 @@ export default function ContactForm() {
     setLoading(true);
 
     // Ganti dengan ID dari Dashboard EmailJS Anda
-    const SERVICE_ID = "service_twizzy803"; 
-    const TEMPLATE_ID = "template_4rxfl0d";
-    const PUBLIC_KEY = "gGnEFGOOB8bMemrPS";
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID; 
+    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
+    // 2. Cek Keamanan (Opsional tapi bagus untuk debugging)
+    // Jika lupa setting di Netlify, error ini akan muncul di Console browser
+    if (!serviceID || !templateID || !publicKey) {
+      console.error("Error: EmailJS Environment Variables belum disetting!");
+      alert("Maaf, terjadi kesalahan konfigurasi pada server.");
+      setLoading(false);
+      return; // Berhenti di sini, jangan lanjut kirim
+    }
+
+    // 3. Eksekusi Pengiriman Email
     if (form.current) {
       emailjs
-        .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+        .sendForm(serviceID, templateID, form.current, publicKey)
         .then(
           (result) => {
-            console.log(result.text);
-            alert("Pesan berhasil terkirim!");
+            console.log("Sukses:", result.text);
+            alert("Pesan berhasil terkirim! Terima kasih.");
             setLoading(false);
-            form.current?.reset(); // Kosongkan form setelah kirim
+            form.current?.reset(); // Kosongkan form setelah sukses
           },
           (error) => {
-            console.log(error.text);
-            alert("Gagal mengirim pesan. Coba lagi.");
+            console.error("Gagal:", error.text);
+            alert("Gagal mengirim pesan. Silakan coba lagi nanti.");
             setLoading(false);
           }
         );
