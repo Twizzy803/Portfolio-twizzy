@@ -5,6 +5,7 @@ import Iconsins from "../assets/icons/instagram.svg";
 import Iconslink from "../assets/icons/linkedin.svg";
 import Iconsgit from "../assets/icons/github.svg";
 import { ScrollPop } from "../components/Animasi";
+import Email from "../components/Email";
 
 export default function Contact() {
   return (
@@ -57,16 +58,7 @@ export default function Contact() {
           </div>
 
           {/* //? Email */}
-          <div>
-            <form action="" className="flex flex-col lg:w-2xl md:text-base text-sm">
-              <label htmlFor="">Name</label>
-              <input type="text" className="bg-secondary-me rounded-lg text-primary-me py-2 mb-2" />
-              <label htmlFor="">Email</label>
-              <input type="email" className="bg-secondary-me rounded-lg text-primary-me py-2 mb-2" />
-              <label htmlFor="">Pesan</label>
-              <textarea name="" id="" className="bg-secondary-me rounded-lg text-primary-me py-2"></textarea>
-            </form>
-          </div>
+          <Email/>
         </div>
       </ScrollPop>
     </section>
